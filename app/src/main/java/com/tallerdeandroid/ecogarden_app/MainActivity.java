@@ -13,9 +13,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Button buttonIngresarNombre;
+    private EditText editTextNombre;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,19 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });*/
+
+        buttonIngresarNombre = (Button) findViewById(R.id.buttonIngresarNombre);
+        editTextNombre = (EditText) findViewById(R.id.editTextNombre);
+
+        buttonIngresarNombre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String dato = editTextNombre.getText().toString();
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("DATO",dato);
+                startActivity(intent);
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
