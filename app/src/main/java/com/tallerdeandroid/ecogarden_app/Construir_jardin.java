@@ -6,21 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Tareas_basicas extends AppCompatActivity {
+public class Construir_jardin extends AppCompatActivity {
 
     private ImageButton buttonHomeTree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tareas_basicas);
+        setContentView(R.layout.activity_construir_jardin);
 
         buttonHomeTree = (ImageButton) findViewById(R.id.button_home_tree);
 
         buttonHomeTree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Tareas_basicas.this, SecondActivity.class);
+                Intent intent = new Intent(Construir_jardin.this, SecondActivity.class);
                 startActivity(intent);
             }
         });

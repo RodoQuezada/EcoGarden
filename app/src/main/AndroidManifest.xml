@@ -27,7 +27,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Tareas_basicas" />
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".Trucos_concejos" />
+        <activity android:name=".Diseno_jardines" />
+        <activity android:name=".Calendario_jardines" />
+        <activity android:name=".Construir_jardin" />
+        <activity android:name=".Fichas_plantas" />
+        <activity android:name=".About_us"></activity>
     </application>
 
 </manifest>
